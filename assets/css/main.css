@@ -1,0 +1,596 @@
+/* ======== colors ========= */
+
+:root {
+    --main-color : #F4A825;
+    --sec-color : #3485B9 ;
+    --light : #919191 ;
+    --white : #FFFFFF ;
+    --text : #2B2B2B;
+    --section : #F8F8F8;
+}
+
+/* ======== html ========= */
+
+
+* {
+font-family: 'Cairo', sans-serif;
+color: var(--text);
+list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+a {
+    text-decoration: none;
+    color: #2B2B2B;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #2B2B2B;
+}
+
+button {
+    border: none;
+    border-radius: 20px;
+    padding: .5rem 1rem;
+}
+
+
+/* ======== section ========= */
+section {
+    padding: 3rem 0;
+    background-color: var(--section);
+}
+
+section .sectionTittle {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--text);
+    position: relative;
+    margin-right: 5px;
+    padding: 5px 0;
+}
+
+section .sectionTittle::before {
+    content: "";
+    position: absolute;
+    left: 101%;
+    top: 0;
+    height: 100%;
+    border: 2px solid var(--sec-color);
+    border-radius: 5px;
+
+}
+
+/* ======== backToTopBtn ========= */
+
+.backToTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    display: flex;
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s ease-in-out;
+}
+
+
+
+/* ======== navbar ========= */
+
+header nav {
+    position: static ;
+    transition: all 1s ease-in-out;
+}
+.nav-item .nav-link {
+    font-size: 20px;
+    color: #2B2B2B;
+    font-weight:normal;
+    transition: all .5s ease-in-out;
+}
+
+.nav-item  .active {
+    color: #EE8E3D !important; 
+    font-weight: bold !important;
+    position: relative;
+}
+.nav-item .active::after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    border: 1px solid var(--main-color);
+}
+nav .navbar-brand img {
+    display: block;
+    height: 70px;
+}
+
+nav #sign-log button {
+    width: 130px;
+}
+
+nav #log-in {
+    background-color: var(--main-color);
+    color: var(--text);
+}
+nav #log-in:active {
+    box-shadow: 2px 2px var(--sec-color) , -2px -2px var(--sec-color) , 2px -2px var(--sec-color) , -2px 2px var(--sec-color);
+    background-color: var(--sec-color);
+}
+nav #log-in:hover {
+    background-color: var(--sec-color);
+    color: white;
+    border: 1px solid var(--sec-color);
+}
+
+
+nav #sign-in {
+    background-color: white;
+    color: var(--sec-color);
+    border: 1px solid var(--sec-color);
+}
+
+nav #sign-in:active {
+    box-shadow: 2px 2px var(--sec-color) , -2px -2px var(--sec-color) , 2px -2px var(--sec-color) , -2px 2px var(--sec-color);
+}
+
+nav #sign-in:hover {
+    background-color: var(--sec-color);
+    color: var(--text);
+}
+
+
+
+/* ======== heroSection ========= */
+
+
+header #heroSection {
+    height: calc(100vh - 96px);
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+
+header #heroSection .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#heroSection .heroSecText .herSecTittle {
+    font-size: 110px;
+    font-weight: bold;
+}
+
+#heroSection .heroSecText .heroSecPrag{
+    color: var(--text);
+}
+
+#heroSection .heroSecText .herSecTittle span:nth-child(1) {
+    color: var(--main-color);
+}
+
+#heroSection .heroSecText .herSecTittle span:nth-child(2) {
+    color: var(--sec-color);
+}
+
+#heroSection .heroSecText button {
+    background-color: var(--main-color);
+    color: var(--text);
+    width: 150px;
+}
+
+#heroSection .heroSecText button:active {
+    box-shadow: 2px 2px var(--sec-color) , -2px -2px var(--sec-color) , 2px -2px var(--sec-color) , -2px 2px var(--sec-color);
+    background-color: var(--sec-color);
+}
+#heroSection .heroSecText button:hover {
+    background-color: var(--sec-color);
+    color: white;
+    outline: 1px solid var(--sec-color);
+}
+
+
+#heroSection  .animation-up-down {
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+@keyframes up-down {
+    0% {transform: translateY(10px);}
+    100% {transform: translateY(-10px);}
+}
+
+
+@media (max-width:992px) {
+
+    #heroSection .heroSecText button {
+        margin: 0 auto;
+    }
+
+    #heroSection .animation-up-down {
+        width: 50%;
+        height: 50%;
+    }
+}
+
+@media (max-width:567px) {
+    #heroSection {
+        margin-top: 0 !important;
+    }
+    #heroSection .heroSecText .herSecTittle {
+        font-size: 70px;
+        font-weight: bold;
+    }
+}
+
+
+
+/* ======== news ========= */
+
+#news {
+    position: relative;
+}
+
+
+#news .card {
+    background-color: white;
+    border: none;
+    border-radius: 30px;
+}
+
+#news .card .card-date {
+    color: var(--light);
+    font-weight:600;
+    font-size: 16px
+}
+
+#news .card .card-text {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text)
+}
+
+
+
+.swiper-navigation {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    content: "" !important;
+}
+
+
+.swiper-button-prev i,
+.swiper-button-next i {
+    font-size: 20px;
+    text-align: center;
+    width: 30px;
+    height: 20px;
+    color: white;
+    padding: 20px;
+    position: relative;
+}
+
+.swiper-button-prev i::before,
+.swiper-button-next i::before {
+    position: absolute;
+    background-color: var(--main-color);
+    width: 120%;
+    height: auto;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+
+
+/* ======== service ========= */
+
+#service .card {
+    padding: 30px 20px;
+    border: none;
+    border-radius: 30px;
+}
+
+#service .card .card-img {
+    position: relative;
+    width: 60%;
+}
+
+#service .card .card-img::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 16%;
+    border-radius: 20px;
+}
+
+#service .card1 .card-img::before {
+    background-color: #E5B80B;
+}
+#service .card2 .card-img::before {
+    background-color: #0BAAE5;
+}
+#service .card3 .card-img::before {
+    background-color: #530BE5;
+}
+#service .card4 .card-img::before {
+    background-color: #E55D0B;
+}
+
+
+
+#service .card .card-tittle {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+#service .card p {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--light);
+}
+
+
+/* ======== sectors ========= */
+
+#sectors .card {
+    background-color: transparent;
+    border: none;
+}
+
+
+#sectors .card .card-tittle {
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    font-weight: 400;
+    border-radius: 0 0 30px 30px;
+}
+
+#sectors .card1 .card-tittle {
+    background-color: #07BEF8;
+}
+
+#sectors .card2 .card-tittle {
+    background-color: #F86707;
+
+}
+
+#sectors .card3 .card-tittle {
+    background-color: #00D586;
+
+}
+
+/* ======== Seminars ========= */
+
+
+#seminars .card {
+    background-color: white;
+    border: none;
+    border-radius: 30px;
+}
+
+#seminars .card .card-img img {
+    border-radius: 30px;
+}
+
+#seminars .card .card-text .card-tittle {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#seminars .card .card-text .card-date {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--light);
+}
+
+#seminars .card .card-text .card-link {
+    width: 30%;
+    background-color: var(--main-color);
+}
+
+#seminars .card .card-text .card-link:active {
+    box-shadow: 2px 2px var(--sec-color) , -2px -2px var(--sec-color) , 2px -2px var(--sec-color) , -2px 2px var(--sec-color);
+    background-color: var(--sec-color);
+}
+#seminars .card .card-text .card-link:hover {
+    background-color: var(--sec-color);
+    color: white;
+    border: 1px solid var(--sec-color);
+}
+
+
+/* ======== clients ========= */
+
+/* ======== ConnectUs ========= */
+
+#ConnectUs label {
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 5px;
+}
+
+#ConnectUs input,textarea,select {
+    padding: 10px;
+    background-color: #F2F1F5;
+    border: 1px solid #DFDFDF;
+    border-radius: 16px;
+}
+
+#ConnectUs button {
+    background-color: var(--main-color);
+    font-size: 20px;
+    color: white;
+}
+
+#ConnectUs button:active {
+    box-shadow: 2px 2px var(--sec-color) , -2px -2px var(--sec-color) , 2px -2px var(--sec-color) , -2px 2px var(--sec-color);
+    background-color: var(--sec-color);
+}
+#ConnectUs button:hover {
+    background-color: var(--sec-color);
+    color: white;
+    border: 1px solid var(--sec-color);
+}
+
+
+#ConnectUs iframe {
+    width: 650px;
+    height: 550px; 
+    border: 0;
+    filter: grayscale(90%);
+    
+}
+
+
+@media (max-width:992px) {
+    #ConnectUs iframe {
+        width: 450px;
+        height: 350px; 
+    }
+}
+
+
+@media (max-width:567px) {
+    #ConnectUs iframe {
+        width: 300px;
+        height: 200px; 
+    }
+}
+
+
+/* ======== footer ========= */
+
+footer {
+    background-color: var(--sec-color);
+    color: wheat;
+}  
+
+footer a,p {
+    color: white;
+}
+
+footer i {
+    color: var(--main-color);
+    font-size: 25px;
+}
+
+footer input {
+    padding: 10px;
+    border: none;
+    border-radius: 0 20px 20px 0;
+}
+    
+
+footer button {
+    background-color: var(--main-color);
+    border-radius: 20px 0 0 20px;
+    background-color: var(--main-color);
+    border: none;
+    color: white;
+}
+
+footer button:active {
+    box-shadow: 2px 2px var(--main-color) , -2px -2px var(--main-color) , 2px -2px var(--main-color) , -2px 2px var(--main-color);
+}
+
+footer button:hover {
+    transform: scale(1.1);
+}
+
+
+/* ======== model ========= */
+
+
+
+#model {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+    z-index: 111111111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+}
+
+/* ======== model logIn & Registration ========= */
+
+#model #logIn,#seminarReg {
+    width: 50%;
+    height: 60%;
+    border-radius: 30px;
+}
+
+#model div i {
+    font-size: 30px;
+    cursor: pointer;
+}
+#model div h2 {
+    font-size: 25px;
+    font-weight: 600;
+}
+#model div p {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--light);
+}
+
+#model div input,select {
+    padding: 10px;
+    background-color: #F2F1F5;
+    border: 1px solid #DFDFDF;
+    border-radius: 16px;
+}
+
+#model button {
+    color: var(--text);
+    background-color: var(--main-color);
+}
+
+#model button:active {
+    box-shadow: 2px 2px var(--main-color) , -2px -2px var(--main-color) , 2px -2px var(--main-color) , -2px 2px var(--main-color);
+}
+
+@media (max-width:567px) {
+    #model #logIn,#seminarReg {
+        width: 90%;
+        height: 60%;
+    }
+
+    #model div button {
+        margin: 0 auto;
+        width: 50%;
+    }
+}
+
+
+#model #confirmReg {
+    width: 30%;
+    height: 40%;
+    border-radius: 30px;
+}
+
