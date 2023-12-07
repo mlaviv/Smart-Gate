@@ -166,7 +166,7 @@ let openRegistration = () => {
     <div id="seminarReg" class="col-md-6 bg-white py-4 px-5">
     <div><i class='bx bx-x' onclick="closeModel()"></i></div>
     <div class="row">
-        <div class="col-lg-6 col-sm-12 py-5 text-center text-lg-end">
+        <div class="col-lg-6 col-sm-12 py-3 text-center text-lg-end">
             <div>
                 <h2 class="py-2">التسجيل في الندوة</h2>
                 <p class="py-2">من فضلك قم بإدخال البيانات المطلوبة منك وسوف يتم إرسال تفاصيل الندوة لك وموعدها علي بريدك الإلكتروني ورقم تذكرة الحضور الخاصة بك</p>

@@ -161,6 +161,7 @@ header #heroSection {
     display: flex;
     align-items: center;
     background-color: white;
+    overflow: hidden;
 }
 
 header #heroSection .row {
@@ -268,7 +269,6 @@ header #heroSection .row {
     position: absolute;
     top: 100%;
     left: 50%;
-    transform: translateX(-50%);
 }
 .swiper-button-prev::after,
 .swiper-button-next::after {
@@ -421,6 +421,9 @@ header #heroSection .row {
 /* ======== clients ========= */
 
 /* ======== ConnectUs ========= */
+#ConnectUs {
+    overflow: hidden;
+}
 
 #ConnectUs label {
     font-size: 20px;
@@ -545,6 +548,12 @@ footer button:hover {
     border-radius: 30px;
 }
 
+#model #confirmReg {
+    width: 40%;
+    height: 50%;
+    border-radius: 30px;
+}
+
 #model div i {
     font-size: 30px;
     cursor: pointer;
@@ -576,9 +585,9 @@ footer button:hover {
 }
 
 @media (max-width:567px) {
-    #model #logIn,#seminarReg {
-        width: 90%;
-        height: 60%;
+    #model #logIn,#seminarReg,#confirmReg {
+        width: 90% !important;
+        height: 60% !important;
     }
 
     #model div button {
@@ -588,9 +597,4 @@ footer button:hover {
 }
 
 
-#model #confirmReg {
-    width: 30%;
-    height: 40%;
-    border-radius: 30px;
-}
 
