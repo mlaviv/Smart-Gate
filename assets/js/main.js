@@ -1,5 +1,11 @@
 
 
+
+
+window.addEventListener("load",() => {
+    document.querySelector("#loaderdiv").remove()
+})
+
 //  ================ smooth scroll =============== //
 
 $(function(){
@@ -200,7 +206,6 @@ let continueconfirmReg = () => {
 </div>
     `;
 }
-
 
 
 

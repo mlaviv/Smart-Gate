@@ -268,7 +268,7 @@ header #heroSection .row {
 .swiper-navigation {
     position: absolute;
     top: 100%;
-    left: 50%;
+    left: 52%;
 }
 .swiper-button-prev::after,
 .swiper-button-next::after {
@@ -596,5 +596,36 @@ footer button:hover {
     }
 }
 
+/* ======== loader ========= */
 
+#loaderdiv {
+    z-index: 22222;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 4px solid var(--main-color);
+    border-left-color: var(--sec-color);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
 
+@keyframes spin {
+    0% {
+    transform: rotate(0deg);
+    }
+
+    100% {
+    transform: rotate(360deg);
+    }
+}
